@@ -1,0 +1,30 @@
+
+<mat-card>
+  <form (submit)="onAddEvent(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input matInputtype="text"
+      name="title"
+      ngModelrequiredplaceholder="Enter Event Title"
+      #title="ngModel" />
+      <mat-error *ngIf="title.invalid">Please enter a title</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInputtype="text"
+      name="location"
+      ngModelrequiredplaceholder="Enter Event Location"
+      #location="ngModel" />
+      <mat-error *ngIf="location.invalid">Please enter a title</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput rows="8"
+      name="description"
+      ngModelrequiredplaceholder="Enter Event Description"
+      #description="ngModel">
+      <mat-error *ngIf="description.invalid">Please enter a title</mat-error>
+      Enter your event details</textarea><br>
+      <button mat-raised-button
+      color="primary"
+      type="submit">Save Event</button>
+    </mat-form-field>
+  </form>
+</mat-card>

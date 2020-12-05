@@ -1,0 +1,8 @@
+<mat-accordion *ngIf="events.length> 0">
+
+  <mat-expansion-panel *ngFor="let event of events">
+    <mat-expansion-panel-header>{{event.title}}</mat-expansion-panel-header>
+    <p>{{event.description}}</p><br>
+    <b>Location: </b>{{event.location}}
+    <mat-action-row><button mat-button color="primary">EDIT EVENT</button><button mat-button color="warn">DELETE</button>
+    </mat-action-row></mat-expansion-panel></mat-accordion><p *ngIf="events.length<= 0">No Posts Yet!</p>
